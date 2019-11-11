@@ -18,8 +18,9 @@ call plug#begin()
 " For MS Windows, this is probably better:
 "call plug#begin('~/vimfiles/plugged')
 Plug 'vim-airline/vim-airline'
-" ... etc
-
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " FEATURES TO COVER:
@@ -168,3 +169,6 @@ autocmd bufnewfile *.sh :-1read  ~/.vim/skeleton/sh.txt
 autocmd bufnewfile *.py :-1read  ~/.vim/skeleton/py.txt
 "Remember buffers
 :exec 'set viminfo=%,' . &viminfo
+colorscheme gruvbox
+set bg=dark
+let g:airline_theme='dark'
