@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+#Prepare ffmpeg input file
+
+
+FILE_TYPE="mp4"
+VID_DIR="videos"
+
+for file in $(ls $VID_DIR -sort | awk '{print $9}'); do echo file $PWD/$file >> INPUT.txt; done
+
+
+
+#for file in $(ls *.$FILE_TYPE -sort | awk '{print $9}'); do echo file $PWD/$file >> INPUT.txt; done
+ffmpeg -f concat -safe 0 -i < INPUT.txt -c copy OUTPUT.mp4
+
