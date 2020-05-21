@@ -25,17 +25,3 @@ else
 	ffmpeg -f concat -safe 0 -i $IN_FILE -c copy $OUT_FILE
 fi
 
-#VID_DIR=videos
-#IN_FILE=INPUT.txt
-#OUT_FILE=OUTPUT.$FILE_TYPE
-
-
-
-#OUT_FILE=OUTPUT.$FILE_TYPE
-#for file in $(ls $VID_DIR -sort | awk '{print $9}'); do echo file $PWD/$file >> INPUT.txt; done
-#
-#
-#
-##for file in $(ls *.$FILE_TYPE -sort | awk '{print $9}'); do echo file $PWD/$file >> INPUT.txt; done
-#ffmpeg -f concat -safe 0 -i < INPUT.txt -c copy OUTPUT.mp4
-
